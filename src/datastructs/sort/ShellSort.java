@@ -103,21 +103,4 @@ public class ShellSort {
         }
     }
 
-
-    public static void shell2(int[] arr){
-        for (int step = arr.length / 2; step > 0; step /= 2) {
-            for (int i = step; i < arr.length; i++) {
-                int ele = arr[i];
-                int j = i;
-                if(arr[j] < arr[j - step]){
-                    while (j - step >= 0 && arr[j - step] > ele){
-                        arr[j] = arr[j-step];
-                        j--;
-                    }
-                    arr[j] = ele;
-                }
-            }
-
-        }
-    }
 }

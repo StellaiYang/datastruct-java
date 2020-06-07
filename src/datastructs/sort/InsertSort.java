@@ -8,9 +8,9 @@ import java.util.Arrays;
 public class InsertSort {
 
     public static void main(String[] args) {
-        int[] arr = {101,34,119,1,89,-1,1,-90};
+        int[] arr = {101,34,119,1};
 //        int[] arr = {2,3,4,5,6,1};
-        insertSort2(arr);
+        insertSort(arr);
         System.out.println("arr = " + Arrays.toString(arr));
     }
 
@@ -79,17 +79,5 @@ public class InsertSort {
         System.out.println(Arrays.toString(arr));
 */
 
-    }
-
-    public static void insertSort2(int[] arr){
-        for (int i = 1; i < arr.length; i++) {
-            int insertValue = arr[i];
-            int insertIndex = i - 1;
-            while (insertIndex >=0 && arr[insertIndex] > insertValue){
-                arr[insertIndex+1] = arr[insertIndex];
-                insertIndex--;
-            }
-            arr[insertIndex+1] = insertValue;
-        }
     }
 }
